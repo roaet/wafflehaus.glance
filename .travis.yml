@@ -1,0 +1,11 @@
+language: python
+python:
+  - "2.7"
+  - "2.6"
+install:
+  - pip install -r requirements.txt -r test-requirements.txt --use-mirrors
+  - pip install -e .
+before_script:
+  - "flake8 --show-source --builtins=_ wafflehaus"
+script:
+  - nosetests --with-coverage --cover-package=wafflehaus.glance --cover-erase --cover-html --cover-html-dir=.coverage-report --cover-min-percentage=10

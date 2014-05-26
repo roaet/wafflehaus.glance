@@ -1,4 +1,4 @@
 wafflehaus.glance
-=================
+==================
 
-Collection of WSGI middlewares for glance
+Wafflehaus modules specific to glance
